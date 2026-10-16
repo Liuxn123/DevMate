@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: devmate
+  datasource:
+    url: jdbc:sqlite:${DEVMATE_DB_PATH:./devmate.db}
+    driver-class-name: org.sqlite.JDBC
+
+server:
+  address: 127.0.0.1
+  port: 8080

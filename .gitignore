@@ -1,0 +1,32 @@
+# Build output
+**/target/
+**/build/
+devmate-server/*.db
+devmate-server/*.db-shm
+devmate-server/*.db-wal
+
+# IDE
+.idea/
+*.iml
+.vscode/
+.classpath
+.project
+.settings/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Local configuration and secrets
+.env
+.env.*
+*.local
+application-local.yml
+application-local.yaml
+
+# Logs
+*.log
+logs/
+
+node_modules/
+dist/
