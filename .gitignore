@@ -1,9 +1,12 @@
 # Build output
 **/target/
 **/build/
-devmate-server/*.db
-devmate-server/*.db-shm
-devmate-server/*.db-wal
+
+# Local SQLite runtime data (location depends on the launch working directory)
+*.db
+*.db-shm
+*.db-wal
+*.db-journal
 
 # IDE
 .idea/
@@ -30,3 +33,5 @@ logs/
 
 node_modules/
 dist/
+# Local dependency cache used only for approved development builds.
+.devmate-build-cache/

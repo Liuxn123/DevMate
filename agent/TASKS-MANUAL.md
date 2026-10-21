@@ -4,8 +4,8 @@
 
 删除表格行不会删除任务，数据库中的任务会在同步时恢复到表格。
 
-<!-- agent-manager:tasks:start -->
+<!-- selfManger:tasks:start -->
 
 | ID | 任务 | 状态 | 日期 | 优先级 | 类型 | 目标编号 | 备注 | 完成记录 |
 |---|---|---|---|---|---|---|---|---|
-<!-- agent-manager:tasks:end -->
+<!-- selfManger:tasks:end -->

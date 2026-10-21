@@ -1,7 +1,7 @@
 package com.devmate;
 
-import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.SpringApplication;
 
 /** Starts the Spring application and component scanning from the com.devmate package. */
 @SpringBootApplication

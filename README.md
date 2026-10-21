@@ -6,13 +6,13 @@
 
 ## 设计资料
 
-产品定位、功能需求、技术架构、竞品分析、路线和原型见 [`DevMate-语雀/`](DevMate-语雀/)。V1 用户项目先支持 Java/Spring Boot + Maven；Node.js 用户项目延后到 V1.1。DevMate 自己的 Vue 前端使用 Node.js 构建，不等于 V1 对外支持 Node 项目。
+产品定位、功能需求、技术架构、竞品分析、路线和原型见 [`文档/`](文档/)。V1 用户项目先支持 Java/Spring Boot + Maven；Node.js 用户项目延后到 V1.1。DevMate 自己的 Vue 前端使用 Node.js 构建，不等于 V1 对外支持 Node 项目。
 
 项目当前依赖版本和本机环境基线见 [`文档/技术栈与开发环境.md`](文档/技术栈与开发环境.md)，依赖或环境变化后需要同步维护。
 
 ## 当前学习切片
 
-浏览器中的 Vue 页面请求 `GET /api/health`，Spring Boot Controller 返回 JSON。后端还提供项目登记 API，并用 SQLite 保存项目记录。接下来逐步加入项目识别、环境扫描、受控任务执行，最后接入 Spring AI。
+浏览器中的 Vue 页面请求 `GET /api/health`，Spring Boot Controller 返回 JSON。后端提供 SQLite 项目登记、M2 只读项目识别和本机 JDK/Maven/Git 扫描入口。M2 主流程已通过页面验收；M3 Spring AI 只读工具循环及模型设置首版已写，待用户编译和运行验收。后续逐步加入结构化计划、审批与受控执行。
 
 ## 运行方式
 
@@ -22,4 +22,11 @@
 
 ## 当前路径
 
-`devmate-server/` 后端 · `devmate-web/` 前端 · `DevMate-语雀/` 产品与架构资料 · [`任务清单.md`](任务清单.md) 学习与开发顺序
+`devmate-server/` 后端 · `devmate-web/` 前端 · `文档/` 产品与架构资料 · [`任务清单.md`](任务清单.md) 学习与开发顺序
+
+
+## 目录与协作入口
+
+完整目录职责见 [目录结构](文档/目录结构.md)。开发 Agent 先读 [AGENTS.md](AGENTS.md)，再按 [接续入口](agent/README.md) 阅读当前状态和待办；产品 Agent 的代码职责见 [Agent 开发说明](文档/Agent开发说明.md)。
+
+根目录的 [项目主页](项目主页.md) 用于 Obsidian 导航，[任务清单](任务清单.md) 维护学习与开发待办。运行数据库、依赖、构建产物和 IDE 文件由 Git 忽略；数据库保留当前位置。上面的安装、构建和启动命令供参考，执行前仍需明确审批。

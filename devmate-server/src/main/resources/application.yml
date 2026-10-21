@@ -1,6 +1,16 @@
 spring:
   application:
     name: devmate
+  ai:
+    # Agent 的聊天模型由设置页运行时创建；关闭 starter 的启动期模型自动配置。
+    model:
+      chat: none
+      embedding: none
+      image: none
+      moderation: none
+      audio:
+        speech: none
+        transcription: none
   datasource:
     url: jdbc:sqlite:${DEVMATE_DB_PATH:./devmate.db}
     driver-class-name: org.sqlite.JDBC
@@ -8,3 +18,8 @@ spring:
 server:
   address: 127.0.0.1
   port: 8080
+
+devmate:
+  agent:
+    # 限制一次对话中模型与工具之间的往返次数，防止 Agent 循环调用。
+    max-tool-rounds: 3
